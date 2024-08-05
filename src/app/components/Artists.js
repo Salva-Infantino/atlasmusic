@@ -1,6 +1,6 @@
-const Artists = () => {
+const Artists = ({ sectionRef }) => {
     return (
-        <section id="Artists" className="bg-black text-white">Artists</section>
+        <section id="Artists" className="bg-black text-white" ref={sectionRef}>Artists</section>
     )
 }
 

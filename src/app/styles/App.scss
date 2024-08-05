@@ -69,16 +69,17 @@ nav {
             bottom: -10px;
             left: 0;
             transform: scaleX(0);
+            transition: .5s;
         }
 
-        &:hover:not([id="aria-Get-Tickets"]) {
+                                                                                                                                                                                                                                                                &:hover:not([id="getTickets"]),
+                                                                                                                                                                                                                                                                &.active {
             &::after {
                 transform: scaleX(1);
-                transition: .5s;
             }
         }
 
-        &[id="aria-Get-Tickets"] {
+                                                                                                                                                                                                                                                                &#getTickets {
             @include btn;
         }
     }
@@ -94,5 +95,12 @@ nav {
     &:hover {
         color: white;
         background-color: black;
+    }
+}
+.social-media {
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.5);
     }
 }
