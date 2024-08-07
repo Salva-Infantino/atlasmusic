@@ -11,6 +11,8 @@ import Sphere from './components/Sphere';
 
 import Nav from './components/Nav';
 
+import ParticlesComponent from './components/Particles';
+
 const Home = () => {
 
   const scrollContainerRef = useRef(null);
@@ -44,6 +46,7 @@ const Home = () => {
       
       <Nav activeSection={activeSection} />
       
+      <ParticlesComponent id="particles" />
       <div className='onePage overflow-scroll h-screen' ref={scrollContainerRef}>
         <Atlas />
         <Events />

@@ -3,14 +3,16 @@
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import logo from '../imgs/logo.png';
+// import ParticlesComponent from './Particles';
 
 const Atlas = () => {
     return (
         <section id="Atlas" className='flex-col text-white'>
-            <video autoPlay muted loop id="myVideo" className='absolute -z-50 w-full grayscale'>
+            {/* <video autoPlay muted loop id="myVideo" className='absolute -z-50 w-full grayscale'>
                 <source src="../doc/party.mp4" type="video/mp4"/>
                 Your browser does not support HTML5 video.
-            </video>
+            </video> */}
+            {/* <ParticlesComponent id="particles" /> */}
             <Image src={logo} width={500} height={500} alt="Atlas Music" />
             <div>&nbsp;
             <TypeAnimation

@@ -66,7 +66,7 @@ const Events = ({ sectionRef }) => {
         <section id="Events" className='text-white' ref={sectionRef}>
             <div className="w-full h-full flex">
                 <Carousel events={events} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-                <div className="h-full w-1/2 flex flex-col justify-center items-center bg-slate-600 text-black infos">
+                <div className="h-full w-1/2 flex flex-col justify-center items-center bg-slate-600 text-black opacity-70">
                     {events[currentIndex].artists.map((artist, i) => {return <p key={i} className={artistClass(i)}>{artist}</p>})}
                 </div>
             </div>

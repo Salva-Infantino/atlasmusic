@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+$slate-600: #475569;
 @mixin btn {
     text-decoration: none;
     color: black;
@@ -18,6 +19,137 @@
     }
 }
 
+@mixin bg-gradient-anim($direction, $color1) {
+    background: linear-gradient($direction, $color1, rgba(0, 0, 0, 0));
+    background-size: 400% 400%;
+
+    @if $direction ==180deg {
+        -webkit-animation: bg-gradient-anim-top 15s ease infinite;
+        -moz-animation: bg-gradient-anim-top 15s ease infinite;
+        -o-animation: bg-gradient-anim-top 15s ease infinite;
+        animation: bg-gradient-anim-top 15s ease infinite;
+
+        @-webkit-keyframes bg-gradient-anim-top {
+            0% {
+                background-position: 50% 0%
+            }
+
+            50% {
+                background-position: 50% 100%
+            }
+
+            100% {
+                background-position: 50% 0%
+            }
+        }
+
+        @-moz-keyframes bg-gradient-anim-top {
+            0% {
+                background-position: 50% 0%
+            }
+
+            50% {
+                background-position: 50% 100%
+            }
+
+            100% {
+                background-position: 50% 0%
+            }
+        }
+
+        @-o-keyframes bg-gradient-anim-top {
+            0% {
+                background-position: 50% 0%
+            }
+
+            50% {
+                background-position: 50% 100%
+            }
+
+            100% {
+                background-position: 50% 0%
+            }
+        }
+
+        @keyframes bg-gradient-anim-top {
+            0% {
+                background-position: 50% 0%
+            }
+
+            50% {
+                background-position: 50% 100%
+            }
+
+            100% {
+                background-position: 50% 0%
+            }
+        }
+    }
+
+    @else if $direction ==270deg {
+        -webkit-animation: bg-gradient-anim-right 15s ease infinite;
+        -moz-animation: bg-gradient-anim-right 15s ease infinite;
+        -o-animation: bg-gradient-anim-right 15s ease infinite;
+        animation: bg-gradient-anim-right 15s ease infinite;
+
+        @-webkit-keyframes bg-gradient-anim-right {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @-moz-keyframes bg-gradient-anim-right {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @-o-keyframes bg-gradient-anim-right {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes bg-gradient-anim {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    }
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -44,11 +176,15 @@ section {
     font-size: 2rem;
     scroll-snap-align: start;
 
+    &#About {
+            @include bg-gradient-anim(180deg, $slate-600);
+        }
     &#Contact {
+        @include bg-gradient-anim(270deg, $slate-600);
         [type="submit"] {
             @include btn;
             cursor: pointer;
-            background-color: black;
+            background-color: transparent;
             color: white;
             border: 2px solid white;
             width: 100%;
@@ -97,10 +233,29 @@ nav {
         background-color: black;
     }
 }
+
 .social-media {
     transition: .2s;
 
     &:hover {
         transform: scale(1.5);
+    }
+}
+#particles {
+    z-index: -1;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #FFF 20%, $slate-600 40%, $slate-600 60%, #FFF 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 10s ease-in infinite;
+
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
     }
 }

@@ -34,7 +34,7 @@ const Carousel = ({events, currentIndex, setCurrentIndex}) => {
             <a href="" className="btn">Buy Ticket</a>
         </p>
         {
-            events.length > 0 &&
+            events.length > 1 &&
             <div className='flex justify-around items-center w-full py-2'>
                 {/* Left Arrow */}
             <div className='text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -58,7 +58,7 @@ const Carousel = ({events, currentIndex, setCurrentIndex}) => {
             </div>
             </div>
         }
-        <a href="" className="flex justify-between items-center p-4 bg-black text-white absolute bottom-0 w-full text-5xl">
+        <a href="" className="flex justify-between items-center p-4 bg-black text-white hover:bg-slate-600 absolute bottom-0 w-full text-5xl">
           <span>All upcoming events</span>
           <FaArrowRight />
         </a>

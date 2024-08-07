@@ -6,7 +6,7 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 const About = ({ sectionRef }) => {
     return (
-        <section id="About" className="bg-black text-white flex-col px-20" ref={sectionRef}>
+        <section id="About" className="text-white flex-col px-20" ref={sectionRef}>
             <h2 className="text-7xl mb-8">About us</h2>
             <div>The ultimate electronic music experience from Liege. Our aim is to produce the best in large-scale shows & festivals nationally.</div>
             <div className="flex justify-around text-center mt-20">

@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 const Contact = ({ sectionRef }) => {
     return (
-        <section id="Contact" className="bg-black text-white px-20 flex-col relative" ref={sectionRef}>
+        <section id="Contact" className="text-white px-20 flex-col relative" ref={sectionRef}>
             <div className="flex w-full">
                 <div className="p-8 w-full flex flex-col justify-center">
                     <h2 className="text-7xl mb-8">Contact us !</h2>
@@ -46,7 +46,7 @@ const Contact = ({ sectionRef }) => {
                     <input type="submit" value="Envoyer" />
                 </form>
             </div>
-            <footer className="flex justify-between items-center w-full bg-slate-600 absolute bottom-0 text-base px-4 py-2">
+            <footer className="flex justify-between items-center w-full bg-black absolute bottom-0 text-base px-4 py-2">
                 <small>
                     &copy; Atlas Music - 2024
                 </small>
