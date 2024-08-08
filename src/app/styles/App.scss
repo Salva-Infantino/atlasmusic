@@ -7,7 +7,7 @@ $slate-600: #475569;
     text-decoration: none;
     color: black;
     background-color: white;
-    border: none;
+    border: 1px solid white;
     outline: none;
     border-radius: 2rem;
     text-align: center;
@@ -194,7 +194,7 @@ section {
 }
 
 nav {
-    a {
+    a:not([href="#Atlas"]) {
         &::after {
             content: "";
             display: block;
